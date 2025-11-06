@@ -1,0 +1,11 @@
+[
+  { //TODO convert to stats
+    "code": "pyromaniac",
+    "type": "positive",
+    "attributes": {
+      "firestartingSpeed": 1.0,
+      "firestartingSuccess": 1.0,
+      "firestartingDurability": 1.0
+    }
+  }
+]
