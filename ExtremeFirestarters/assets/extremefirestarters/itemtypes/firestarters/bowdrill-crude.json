@@ -1,0 +1,77 @@
+{
+  "code": "bowdrill-crude",
+  "behaviors": [
+    {
+      "name": "extremefirestarters:FireStarter",
+      "properties": {
+        "igniteAnimation": "startfire",
+        "igniteSound": "game:sounds/player/handdrill",
+        "satietyCost": { "avg": 15, "var": 5 },
+        "damageOnCriticalFailure": { "avg": 1, "var": 1 },
+        "criticalFailureChance": 0.04,
+        "ignitionSpeed": 0.8,
+        "successChance": 0.1,
+        "returnOnBreak": [
+          {
+            "code": "game:firewood",
+            "type": "item",
+            "quantity": { "avg": 0.8 }
+          }
+        ]
+      }
+    },
+    {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Halves",
+        "ctrlKey": true
+      }
+    }
+  ],
+  "durability": 25,
+  "attributes": {
+    "groundStorageTransform": {
+      "translation": { "x": -0.1, "y": 0, "z": 0 },
+      "rotation": { "x": 0, "y": -90, "z": 0 },
+      "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+      "scale": 0.8
+    },
+    "rackable": true,
+    "toolrackTransform": {
+      "translation": { "x": 0, "y": 0.65, "z": 0 },
+      "rotation": { "x": 180, "y": 180, "z": 0 },
+      "origin": { "x": 0.5, "y": 0, "z": 0 },
+      "scale": 1.5
+    }
+  },
+  "creativeinventory": {
+    "general": [ "*" ],
+    "items": [ "*" ],
+    "tools": [ "*" ]
+  },
+  "shape": { "base": "item/resource/bowdrill-crude" },
+  "heldTpHitAnimation": "breaktool",
+  "guiTransform": {
+    "translation": { "x": -3, "y": 0, "z": 0 },
+    "rotation": { "x": 112, "y": -133, "z": 4 },
+    "origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
+    "scale": 1.61
+  },
+  "fpHandTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 1, "y": 0, "z": 0 },
+    "scale": 1
+  },
+  "groundTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 1, "y": 0, "z": 0 },
+    "origin": { "x": 0.51, "y": 0, "z": 0.5 },
+    "scale": 3.6
+  },
+  "tpHandTransform": {
+    "translation": { "x": 0, "y": 0.1, "z": -0.1 },
+    "rotation": { "x": 0, "y": 0, "z": -20 },
+    "origin": { "x": 0.1, "y": 0.1, "z": 0.18 },
+    "scale": 0.76
+  }
+}

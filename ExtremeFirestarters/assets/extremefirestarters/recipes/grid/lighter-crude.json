@@ -37,7 +37,7 @@
         }
     },
     {
-        "__comment": "Repair",
+        //Repairing
         "recipeGroup": 2,
         "ingredientPattern": "R_F,_V_,_B_",
         "ingredients": {

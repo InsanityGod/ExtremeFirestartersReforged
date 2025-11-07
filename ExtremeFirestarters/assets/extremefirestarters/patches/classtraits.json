@@ -4,13 +4,21 @@
     "file": "game:config/characterclasses",
     "op": "addMerge",
     "path": "/1/traits/-",
-    "value": "pyromaniac"
+    "value": "pyromaniac",
+    "condition": {
+      "when": "config://ExtremeFirestarterConfig/ClassTraits",
+      "value": true
+    }
   },
   {
     //Add the trait to the malefactor class.
     "file": "game:config/characterclasses",
     "op": "addMerge",
     "path": "/2/traits/-",
-    "value": "pyromaniac"
+    "value": "pyromaniac",
+    "condition": {
+      "when": "config://ExtremeFirestarterConfig/ClassTraits",
+      "value": true
+    }
   }
 ]

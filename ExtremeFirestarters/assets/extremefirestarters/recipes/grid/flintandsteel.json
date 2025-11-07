@@ -1,6 +1,6 @@
 [
     {
-        "__comment": "Create",
+        //Creation
         "ingredientPattern": "CG,S_",
         "ingredients": {
             "C": {
@@ -25,7 +25,7 @@
         }
     },
     {
-        "__comment": "Repair",
+        //Repairing
         "recipeGroup": 2,
         "ingredientPattern": "CG,S_",
         "ingredients": {

@@ -1,0 +1,81 @@
+{
+  "code": "flintandflint",
+  "behaviors": [
+    {
+      "name": "extremefirestarters:FireStarter",
+      "properties": {
+        "igniteAnimation": "startfire",
+        "igniteSound": "game:sounds/block/loosestone1",
+        "satietyCost": { "avg": 7.5, "var": 2.5 },
+        "damageOnCriticalFailure": { "avg": 1.5, "var": 1 },
+        "criticalFailureChance": 0.02,
+        "ignitionSpeed": 4,
+        "successChance": 0.01,
+        "returnOnBreak": [
+          {
+            "code": "game:flint",
+            "type": "item",
+            "quantity": { "avg": 0.5 }
+          }
+        ]
+      }
+    },
+    {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Quadrants",
+        "ctrlKey": true
+      }
+    }
+  ],
+  "durability": 50,
+  "attributes": {
+    "groundStorageTransform": {
+      "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+      "scale": 0.81
+    },
+    "rackable": true,
+    "toolrackTransform": {
+      "translation": { "x": 0.4, "y": 0.48, "z": 0 },
+      "origin": { "x": 0.5, "y": 0, "z": 0.5 }
+    },
+    "shelvable": true,
+    "onshelfTransform": {
+      "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+      "scale": 0.8
+    }
+  },
+
+  "creativeinventory": {
+    "general": [ "*" ],
+    "items": [ "*" ],
+    "tools": [ "*" ]
+  },
+  "shape": { "base": "item/resource/flintandflint" },
+  "heldTpHitAnimation": "breaktool",
+  "guiTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 127, "y": 67, "z": 13 },
+    "origin": { "x": 0.45, "y": 0.05, "z": 0.45 },
+    "scale": 2.54
+  },
+  "fpHandTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 1, "y": 0, "z": 0 },
+    "scale": 1
+  },
+  "groundTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 1, "y": 0, "z": 0 },
+    "origin": { "x": 0.51, "y": 0, "z": 0.5 },
+    "scale": 3.6
+  },
+  "tpHandTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 0, "y": -20, "z": -54
+    },
+    "origin": { "x": -0.1, "y": 0.2, "z": 0.1
+    },
+    "scale": 0.52
+  }
+}

@@ -1,6 +1,6 @@
 [
     {
-        "__comment": "Create",
+        //Creation
         "recipeGroup": 1,
         "ingredientPattern": "_W_,BGS,_W_",
         "ingredients": {
@@ -29,7 +29,7 @@
         }
     },
     {
-        "__comment": "Repair",
+        //Repairing
         "recipeGroup": 2,
         "ingredientPattern": "_WF,BGS,_W_",
         "ingredients": {

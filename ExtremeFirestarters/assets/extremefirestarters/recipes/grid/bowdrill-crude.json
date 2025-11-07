@@ -35,7 +35,7 @@
         }
     },
     {
-        "__comment": "Create",
+        //Creation
         "recipeGroup": 2,
         "ingredientPattern": "_W_,BGS,_W_",
         "ingredients": {
@@ -65,7 +65,7 @@
         }
     },
     {
-        "__comment": "Repair",
+        //Repairing
         "recipeGroup": 3,
         "ingredientPattern": "_WR,BGS,_W_",
         "ingredients": {

@@ -1,0 +1,74 @@
+{
+  "code": "matches",
+  "class": "extremefirestarters:MergedDurability",
+  "behaviors": [
+    {
+      "name": "extremefirestarters:FireStarter",
+      "properties": {
+        "igniteAnimation": "startfire",
+        "igniteSound": "game:sounds/player/strike1",
+        "satietyCost": { "avg": 0 },
+        "criticalFailureChance": 0,
+        "ignitionSpeed": 100,
+        "successChance": 0.8
+      }
+    },
+    {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "Quadrants",
+        "ctrlKey": true
+      }
+    }
+  ],
+  "durability": 50,
+  "attributes": {
+    "groundStorageTransform": {
+      "rotation": { "x": 0, "y": 45, "z": 0 },
+      "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+      "scale": 0.8
+    },
+    "rackable": true,
+    "toolrackTransform": {
+      "translation": { "x": 0.2, "y": 0.7, "z": 0 },
+      "rotation": { "x": 0, "y": 180, "z": 0 },
+      "scale": 1.25
+    },
+    "shelvable": true,
+    "onshelfTransform": {
+      "rotation": { "x": 0, "y": 45, "z": 0 },
+      "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+      "scale": 0.8
+    }
+  },
+  "creativeinventory": {
+    "general": [ "*" ],
+    "items": [ "*" ],
+    "tools": [ "*" ]
+  },
+  "shape": { "base": "item/resource/matches" },
+  "heldTpHitAnimation": "breaktool",
+  "guiTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 118, "y": 46, "z": 4 },
+    "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+    "scale": 3.12
+  },
+  "fpHandTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 1, "y": 0, "z": 0 },
+    "scale": 1
+  },
+  "groundTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 1, "y": 0, "z": 0 },
+    "origin": { "x": 0.51, "y": 0, "z": 0.5 },
+    "scale": 3.6
+  },
+  "tpHandTransform": {
+    "translation": { "x": 0.8, "y": 0.3, "z": -0.4 },
+    "rotation": { "x": -77, "y": -2, "z": -20 },
+    "origin": { "x": 0.1, "y": 0, "z": 0.18 },
+    "scaleXyz": { "x": -0.55, "y": 0.55, "z": 0.55 }
+  }
+}

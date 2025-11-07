@@ -1,13 +1,16 @@
 {
-    "type": "code",
-    "modid": "extremefirestarters",
-    "name": "ExtremeFirestarters",
-    "authors": [
-        "JohnD"
-    ],
-    "description": "Adds several tiers of firestarters, along with new firestarter behavior.",
-    "version": "0.4.0",
-    "dependencies": {
-        "game": ""
-    }
+  "type": "code",
+  "modid": "extremefirestarters",
+  "name": "Extreme Firestarters Reforged",
+  "authors": [
+    "TheInsanityGod"
+  ],
+  "contributors": [
+    "JohnD"
+  ],
+  "description": "Adds several tiers of firestarters, along with new firestarter behavior.",
+  "version": "1.0.0",
+  "dependencies": {
+    "game": ""
+  }
 }
