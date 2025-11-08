@@ -11,6 +11,7 @@
   "description": "Adds several tiers of firestarters, along with new firestarter behavior.",
   "version": "1.0.0",
   "dependencies": {
-    "game": ""
+    "game": "*",
+    "insanitylib": "*"
   }
 }
