@@ -21,14 +21,9 @@
       "type": "item",
       "stacksize": 1,
       "stock": { "avg": 2, "var": 0.5 },
-      "price": {
-        "avg": 32,
-        "var": 8
-      }
+      "price": { "avg": 32, "var": 8 }
     }
   },
-
-
   {
     "file": "game:blocktypes/clay/lootvessel",
     "op": "addMerge",

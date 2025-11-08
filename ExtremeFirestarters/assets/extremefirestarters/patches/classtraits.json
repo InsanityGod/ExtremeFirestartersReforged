@@ -7,7 +7,7 @@
     "value": "pyromaniac",
     "condition": {
       "when": "config://ExtremeFirestarterConfig/ClassTraits",
-      "value": true
+      "isValue": "true"
     }
   },
   {
@@ -18,7 +18,7 @@
     "value": "pyromaniac",
     "condition": {
       "when": "config://ExtremeFirestarterConfig/ClassTraits",
-      "value": true
+      "isValue": "true"
     }
   }
 ]
