@@ -3,9 +3,9 @@ using ExtremeFirestarters.Code.Config;
 using ExtremeFirestarters.Code.Config.Props;
 using InsanityLib.Util;
 using System;
-using System.Numerics;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
@@ -80,6 +80,7 @@ public class FireStarter(CollectibleObject collObj) : CollectibleBehavior(collOb
     }
 
     public float GetRandomSatietyCost(EntityAgent byEntity) => Props.SatietyCost.nextFloat() * ExtremeFirestarterReforgedConfig.Instance.SatietyCostMultiplier;
+    public float GetMinimumSatietyCost(EntityAgent byEntity) => (Props.SatietyCost.avg - Props.SatietyCost.var + Props.SatietyCost.offset) * ExtremeFirestarterReforgedConfig.Instance.SatietyCostMultiplier;
     
     public float CalculateIgnitionSpeed(EntityAgent byEntity) => Props.IgnitionSpeed * ExtremeFirestarterReforgedConfig.Instance.IgnitionSpeedMultiplier * byEntity.Stats.GetBlended("firestartingSpeed");
 
@@ -93,6 +94,17 @@ public class FireStarter(CollectibleObject collObj) : CollectibleBehavior(collOb
         if (blockSel?.Position is null 
             || playerEntity is not null && !playerEntity.Api.World.Claims.TryAccess(playerEntity.Player, blockSel.Position, EnumBlockAccessFlags.Use) 
             || blockSel.GetOrFindBlock(byEntity.Api.World) is not IIgnitable ignitable) return;
+
+        if (playerEntity is not null)
+        {
+            //TODO make utility methods for satiety in InsanityLib
+            var saturation = playerEntity.WatchedAttributes.GetTreeAttribute("hunger")?.GetFloat("currentsaturation");
+            if(saturation is not null && saturation <= GetMinimumSatietyCost(byEntity))
+            {
+                (byEntity.Api as ICoreClientAPI)?.TriggerIngameError(playerEntity.Player, "toohungry", Lang.Get("extremefirestartersreforged:toohungry"));
+                return;
+            }
+        }
 
         handHandling = EnumHandHandling.PreventDefault;
         handling = EnumHandling.PreventSubsequent;
