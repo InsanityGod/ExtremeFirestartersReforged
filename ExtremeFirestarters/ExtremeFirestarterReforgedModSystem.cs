@@ -1,4 +1,5 @@
-﻿using ExtremeFirestarters.Code.Behaviors;
+﻿using BetterDeathMessages.Code;
+using ExtremeFirestarters.Code.Behaviors;
 using ExtremeFirestarters.Code.Config;
 using InsanityLib.Attributes.Auto;
 using Vintagestory.API.Common;
@@ -7,6 +8,20 @@ using Vintagestory.API.Common;
 namespace ExtremeFirestarters;
 public class ExtremeFirestarterReforgedModSystem : ModSystem
 {
+    public override void Start(ICoreAPI api)
+    {
+        base.Start(api);
+
+        if(api.ModLoader.IsModEnabled("betterdeathmessages")) RegisterDeathMessagePool();
+    }
+
+    public static void RegisterDeathMessagePool() => DeathMessagePool.Pools.Add(new DeathMessagePool
+    {
+        PoolIdentifier = "firestarting-critical-failure",
+        ManualAssignmentOnly = true,
+        BaseCode = "extremefirestartersreforged:firestarting-critical-failure",
+        Length = 4
+    });
 
     public override void AssetsFinalize(ICoreAPI api)
     {

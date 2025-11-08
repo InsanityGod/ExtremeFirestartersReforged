@@ -1,7 +1,9 @@
-﻿using ExtremeFirestarters.Code.Config;
+﻿using BetterDeathMessages.Code;
+using ExtremeFirestarters.Code.Config;
 using ExtremeFirestarters.Code.Config.Props;
 using InsanityLib.Util;
 using System;
+using System.Numerics;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
@@ -35,7 +37,9 @@ public class FireStarter(CollectibleObject collObj) : CollectibleBehavior(collOb
         var damage = Props.DamageOnCriticalFailure.nextFloat() * ExtremeFirestarterReforgedConfig.Instance.CriticaFailureDamageMultiplier;
 
         if(damage <= 0f) return;
-        //TODO better death messages support
+
+        if (entity is EntityPlayer player && entity.Api.ModLoader.IsModEnabled("betterdeathmessages")) SetDeathMessagePool(player);
+
         entity.ReceiveDamage(new DamageSource
         {
             Source = EnumDamageSource.Internal,
@@ -43,6 +47,8 @@ public class FireStarter(CollectibleObject collObj) : CollectibleBehavior(collOb
             SourceEntity = entity
         }, damage);
     }
+
+    private static void SetDeathMessagePool(EntityPlayer player) => player.OverrideDeathMessagePool("firestarting-critical-failure");
 
     /// <returns>false if item broke due to durability loss, else true</returns>
     public bool ConsumeDurability(ItemSlot slot, EntityAgent byEntity)

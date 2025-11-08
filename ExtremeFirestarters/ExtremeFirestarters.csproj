@@ -12,6 +12,10 @@
 		  <HintPath>..\..\InsanityLib\InsanityLib\bin\Debug\Mods\mod\InsanityLib.dll</HintPath>
 		  <Private>False</Private>
 	  </Reference>
+	  <Reference Include="BetterDeathMessages">
+		  <HintPath>..\..\BetterDeathMessages\BetterDeathMessages\bin\Debug\Mods\mod\BetterDeathMessages.dll</HintPath>
+		  <Private>False</Private>
+	  </Reference>
 	  <Reference Include="VintagestoryAPI">
       <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
       <Private>false</Private>
