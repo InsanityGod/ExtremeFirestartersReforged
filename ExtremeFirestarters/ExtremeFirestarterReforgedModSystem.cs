@@ -18,7 +18,7 @@ public class ExtremeFirestarterReforgedModSystem : ModSystem
             var fireStarterBehavior = collectible.GetBehavior<FireStarter>();
             if(fireStarterBehavior is null) continue;
 
-            var mult = ExtremeFirestarterReforged.Instance.DurabilityMultiplier;
+            var mult = ExtremeFirestarterReforgedConfig.Instance.DurabilityMultiplier;
             collectible.Durability = mult > 0 ? (int)(collectible.Durability * mult) : 0;
         }
     }

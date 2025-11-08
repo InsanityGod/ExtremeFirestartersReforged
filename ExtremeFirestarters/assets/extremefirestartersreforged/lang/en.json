@@ -35,5 +35,5 @@
   "game:trait-pyromaniac": "<font color=\"#84ff84\">• Pyromaniac </font>",
   "game:charattribute-firestartingSpeed-1": "+100% Firestarting Speed",
   "game:charattribute-firestartingSuccess-1": "+100% Firestarting Success",
-  "game:charattribute-firestartingDurability-1": "+100% Firestarter Durability"
+  "game:charattribute-firestartingDurabilityUsageChance--0.5": "+50% Chance to not consume Firestarter Durability"
 }
