@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ExtremeFirestarters.Code.Config;
 
-public class ExtremeFirestartersConfig
+public class ExtremeFirestarterReforged
 {
-    [AutoConfig("ExtremeFirestarterConfig.json", ServerSync = true)]
-    public static ExtremeFirestartersConfig Instance { get; private set; }
+    [AutoConfig("ExtremeFirestarterReforgedConfig.json", ServerSync = true)]
+    public static ExtremeFirestarterReforged Instance { get; private set; }
 
     /// <summary>
     /// Multiplier on the speed of ignition attempts, increasing this value makes firestarting faster.

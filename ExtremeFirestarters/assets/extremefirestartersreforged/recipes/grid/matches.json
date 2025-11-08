@@ -31,7 +31,7 @@
     "height": 3,
     "output": {
         "type": "item",
-        "code": "extremefirestarters:matches",
+        "code": "extremefirestartersreforged:matches",
         "quantity": 1
     }
 }

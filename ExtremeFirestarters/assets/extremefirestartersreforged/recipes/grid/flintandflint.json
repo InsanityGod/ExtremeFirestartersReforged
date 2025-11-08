@@ -16,7 +16,7 @@
         "height": 2,
         "output": {
             "type": "item",
-            "code": "extremefirestarters:flintandflint",
+            "code": "extremefirestartersreforged:flintandflint",
             "quantity": 1
         }
     },
@@ -31,7 +31,7 @@
             },
             "H": {
                 "type": "item",
-                "code": "extremefirestarters:flintandflint"
+                "code": "extremefirestartersreforged:flintandflint"
             },
             "F": {
                 "type": "item",
@@ -43,7 +43,7 @@
         "averageDurability": false,
         "output": {
             "type": "item",
-            "code": "extremefirestarters:flintandflint"
+            "code": "extremefirestartersreforged:flintandflint"
         }
     }
 ]

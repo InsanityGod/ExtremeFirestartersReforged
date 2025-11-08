@@ -13,14 +13,14 @@
             },
             "S": {
                 "type": "item",
-                "code": "extremefirestarters:firestriker"
+                "code": "extremefirestartersreforged:firestriker"
             }
         },
         "width": 2,
         "height": 2,
         "output": {
             "type": "item",
-            "code": "extremefirestarters:flintandsteel",
+            "code": "extremefirestartersreforged:flintandsteel",
             "quantity": 1
         }
     },
@@ -39,7 +39,7 @@
             },
             "S": {
                 "type": "item",
-                "code": "extremefirestarters:flintandsteel"
+                "code": "extremefirestartersreforged:flintandsteel"
             }
         },
         "width": 2,
@@ -47,7 +47,7 @@
         "averageDurability": false,
         "output": {
             "type": "item",
-            "code": "extremefirestarters:flintandsteel"
+            "code": "extremefirestartersreforged:flintandsteel"
         }
     }
 ]

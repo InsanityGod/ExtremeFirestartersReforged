@@ -30,7 +30,7 @@
         "height": 3,
         "output": {
             "type": "item",
-            "code": "extremefirestarters:bowdrill-crude",
+            "code": "extremefirestartersreforged:bowdrill-crude",
             "quantity": 1
         }
     },
@@ -60,7 +60,7 @@
         "height": 3,
         "output": {
             "type": "item",
-            "code": "extremefirestarters:bowdrill-crude",
+            "code": "extremefirestartersreforged:bowdrill-crude",
             "quantity": 1
         }
     },
@@ -79,7 +79,7 @@
             },
             "B": {
                 "type": "item",
-                "code": "extremefirestarters:bowdrill-crude"
+                "code": "extremefirestartersreforged:bowdrill-crude"
             },
             "G": {
                 "type": "item",
@@ -95,7 +95,7 @@
         "averageDurability": false,
         "output": {
             "type": "item",
-            "code": "extremefirestarters:bowdrill-crude",
+            "code": "extremefirestartersreforged:bowdrill-crude",
             "quantity": 1
         }
     }

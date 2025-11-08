@@ -17,7 +17,7 @@
             },
             "B": {
                 "type": "item",
-                "code": "extremefirestarters:lighter-body-crude"
+                "code": "extremefirestartersreforged:lighter-body-crude"
             }
         },
         "attributes": {
@@ -33,7 +33,7 @@
         "height": 3,
         "output": {
             "type": "item",
-            "code": "extremefirestarters:lighter-crude"
+            "code": "extremefirestartersreforged:lighter-crude"
         }
     },
     {
@@ -55,7 +55,7 @@
             },
             "B": {
                 "type": "item",
-                "code": "extremefirestarters:lighter-crude"
+                "code": "extremefirestartersreforged:lighter-crude"
             }
         },
         "attributes": {
@@ -72,7 +72,7 @@
         "averageDurability": false,
         "output": {
             "type": "item",
-            "code": "extremefirestarters:lighter-crude"
+            "code": "extremefirestartersreforged:lighter-crude"
         }
     }
 ]

@@ -25,7 +25,7 @@
         "height": 3,
         "output": {
             "type": "item",
-            "code": "extremefirestarters:bowdrill"
+            "code": "extremefirestartersreforged:bowdrill"
         }
     },
     {
@@ -47,7 +47,7 @@
             },
             "B": {
                 "type": "item",
-                "code": "extremefirestarters:bowdrill"
+                "code": "extremefirestartersreforged:bowdrill"
             },
             "G": {
                 "type": "item",
@@ -59,7 +59,7 @@
         "averageDurability":  false,
         "output": {
             "type": "item",
-            "code": "extremefirestarters:bowdrill"
+            "code": "extremefirestartersreforged:bowdrill"
         }
     }
 

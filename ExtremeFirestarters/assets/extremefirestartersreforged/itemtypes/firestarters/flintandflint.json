@@ -1,20 +1,21 @@
 {
-  "code": "flintandsteel",
+  "code": "flintandflint",
   "behaviors": [
     {
-      "name": "extremefirestarters:FireStarter",
+      "name": "extremefirestartersreforged:FireStarter",
       "properties": {
         "igniteAnimation": "startfire",
-        "igniteSound": "game:sounds/block/rock-hit-pickaxe",
-        "satietyCost": { "avg": 8, "var": 3 },
-        "criticalFailureChance": 0,
-        "ignitionSpeed": 10,
-        "successChance": 0.1,
+        "igniteSound": "game:sounds/block/loosestone1",
+        "satietyCost": { "avg": 7.5, "var": 2.5 },
+        "damageOnCriticalFailure": { "avg": 1.5, "var": 1 },
+        "criticalFailureChance": 0.02,
+        "ignitionSpeed": 4,
+        "successChance": 0.01,
         "returnOnBreak": [
           {
-            "code": "extremefirestarters:firestriker",
+            "code": "game:flint",
             "type": "item",
-            "quantity": { "avg": 0.95 }
+            "quantity": { "avg": 0.5 }
           }
         ]
       }
@@ -27,36 +28,35 @@
       }
     }
   ],
-
-  "durability": 400,
+  "durability": 50,
   "attributes": {
     "groundStorageTransform": {
       "origin": { "x": 0.5, "y": 0, "z": 0.5 },
-      "scale": 0.8
+      "scale": 0.81
     },
     "rackable": true,
     "toolrackTransform": {
-      "translation": { "x": 0.3, "y": 0.6, "z": 0 },
-      "rotation": { "x": 7, "y": -17, "z": 180 },
+      "translation": { "x": 0.4, "y": 0.48, "z": 0 },
       "origin": { "x": 0.5, "y": 0, "z": 0.5 }
     },
     "shelvable": true,
     "onshelfTransform": {
       "origin": { "x": 0.5, "y": 0, "z": 0.5 },
-      "scale": 0.65
+      "scale": 0.8
     }
   },
+
   "creativeinventory": {
     "general": [ "*" ],
     "items": [ "*" ],
     "tools": [ "*" ]
   },
-  "shape": { "base": "item/resource/flintandsteel" },
+  "shape": { "base": "item/resource/flintandflint" },
   "heldTpHitAnimation": "breaktool",
   "guiTransform": {
     "translation": { "x": 0, "y": 0, "z": 0 },
-    "rotation": { "x": 126, "y": 92, "z": 6 },
-    "origin": { "x": 0.51, "y": 0.15, "z": 0.46 },
+    "rotation": { "x": 127, "y": 67, "z": 13 },
+    "origin": { "x": 0.45, "y": 0.05, "z": 0.45 },
     "scale": 2.54
   },
   "fpHandTransform": {
@@ -71,9 +71,11 @@
     "scale": 3.6
   },
   "tpHandTransform": {
-    "translation": { "x": -0.1, "y": 0, "z": -0.1 },
-    "rotation": { "x": -28, "y": 0, "z": -20 },
-    "origin": { "x": 0.1, "y": 0, "z": 0.18 },
-    "scale": 0.55
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 0, "y": -20, "z": -54
+    },
+    "origin": { "x": -0.1, "y": 0.2, "z": 0.1
+    },
+    "scale": 0.52
   }
 }

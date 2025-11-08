@@ -70,7 +70,7 @@
     "path": "/behaviors",
     "value": [
       {
-        "name": "extremefirestarters:FireStarter",
+        "name": "extremefirestartersreforged:FireStarter",
         "properties": {
           "igniteAnimation": "startfire",
           "igniteSound": "game:sounds/player/handdrill",

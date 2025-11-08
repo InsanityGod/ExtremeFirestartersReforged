@@ -3,9 +3,9 @@ using ExtremeFirestarters.Code.Config;
 using InsanityLib.Attributes.Auto;
 using Vintagestory.API.Common;
 
-[assembly: AutoRegistry("extremefirestarters")]
+[assembly: AutoRegistry("extremefirestartersreforged")]
 namespace ExtremeFirestarters;
-public class ExtremeFirestartersModSystem : ModSystem
+public class ExtremeFirestarterReforgedModSystem : ModSystem
 {
 
     public override void AssetsFinalize(ICoreAPI api)
@@ -14,11 +14,11 @@ public class ExtremeFirestartersModSystem : ModSystem
 
         foreach(var collectible in api.World.Collectibles)
         {
-            if(collectible.Code?.Domain != "extremefirestarters") continue;
+            if(collectible.Code?.Domain != "extremefirestartersreforged") continue;
             var fireStarterBehavior = collectible.GetBehavior<FireStarter>();
             if(fireStarterBehavior is null) continue;
 
-            var mult = ExtremeFirestartersConfig.Instance.DurabilityMultiplier;
+            var mult = ExtremeFirestarterReforged.Instance.DurabilityMultiplier;
             collectible.Durability = mult > 0 ? (int)(collectible.Durability * mult) : 0;
         }
     }

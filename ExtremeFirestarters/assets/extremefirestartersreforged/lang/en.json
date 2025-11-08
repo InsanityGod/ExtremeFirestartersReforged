@@ -1,0 +1,39 @@
+{
+  "item-flintandflint": "Flint & Flint Firestarter",
+  "itemdesc-flintandflint": "Two pieces of flint you can smash together to hopefully start a fire.",
+
+  "item-bowdrill-crude": "Crude Bow Drill Firestarter",
+  "itemdesc-bowdrill-crude": "A crude bow that hopefully spins a stick, used to heat up wood to the point of maybe catching fire.",
+
+  "item-bowdrill": "Bow Drill Firestarter",
+  "itemdesc-bowdrill": "A bow that spins a stick, used to heat up wood to the point of catching fire.",
+
+  "item-firestriker": "Steel Striker",
+  "itemdesc-firestriker": "A handheld steel bar you could smash against something to make some sparks.",
+
+  "item-flintandsteel": "Flint & Steel Firestarter",
+  "itemdesc-flintandsteel": "A piece of flint and steel you smash together to start a fire.",
+
+  "item-matches": "Matches",
+  "itemdesc-matches": "Explosive-mixture-on-a-stick used for starting fires, covered in wax for safety and longetivity.",
+
+  "item-lighter-body-crude": "Crude Lighter Body",
+  "itemdesc-lighter-body-crude": "A crudely formed metal container with a lid.",
+
+  "item-lighter-crude": "Crude Lighter",
+  "itemdesc-lighter-crude": "Flammable liquid tucked up with some rope and flint for easy fire starting.",
+
+  "gamemechanicinfo-firestarting-title": "Game Mechanic: Firestarting",
+  "gamemechanicinfo-firestarting-text": "<strong>Starting Fires</strong><br>At first, starting fires is extremely difficult. You may even hurt yourself in the process. But with time, you'll get better tools, and will be able to do it easier.<br/><br /><strong>Beginning Tools</strong><br />There are two starting options - the <a href=\"handbook://item-firestarter\">Fire Plough Firestarter</a> and the <a href=\"handbook://item-extremefirestartersreforged:flintandflint\">Flint and Flint Firestarter</a>. Both can be made from easy to find materials, but can take a lot of energy to work.<br /><br /><strong>Durability</strong><br />Not every attempt to start a fire is successful - sometimes your firestarter will break before a fire is started!<br /><br /><strong>Bow Drills</strong><br />The next tier are \"bow drills\". They use a bow to help spin a stick - making it safer and faster.<br/>Your first option is the <a href=\"handbook://item-extremefirestartersreforged:bowdrill-crude\">Crude Bow Drill</a>, made from a Crude Bow. Even if you don't know how to make one for combat, every class can make this item with the utility recipe.<br />Once you get some twine, make a <a href=\"handbook://item-extremefirestartersreforged:bowdrill\">Bow Drill</a>.<br /><br /><strong>Repairing</strong><br />Many firestarters have a <i>chance</i> to return key components when they break - but you can use the repair recipes to make sure you won’t have to replace important parts. Keeping an eye on durability and repairing your item before it breaks will save you resources.<br /><br /><strong>Late Game</strong><br />The <a href=\"handbook://item-extremefirestartersreforged:flintandsteel\">Flint and Steel Firestarter</a> gets many uses, and once you have the steel, the only other thing you need is flint and charcoal.<br />The waterproof <a href=\"handbook://item-extremefirestartersreforged:matches\">Matches</a> will require finding some blasting powder, along with glue and beeswax. They are the quickest, but require a bit of material to make.<br />The <a href=\"handbook://item-extremefirestartersreforged:lighter-crude\">Crude Lighter</a> uses a rope soaked in alcohol to quickly start fires, and can get a fair amount of uses before needing refilled.",
+
+  //Vanilla lang overrides
+  "game:item-firestarter": "Fire Plough Firestarter",
+
+  "game:item-handbooktitle-lighter-body-crude": "Crafting Notes: ",
+  "game:item-handbooktext-lighter-body-crude": "Varying metals can be used for the plate and and nail, but the chisel must be steel. The whole chisel is consumed.",
+
+  "game:trait-pyromaniac": "<font color=\"#84ff84\">• Pyromaniac </font>",
+  "game:charattribute-firestartingSpeed-1": "+100% Firestarting Speed",
+  "game:charattribute-firestartingSuccess-1": "+100% Firestarting Success",
+  "game:charattribute-firestartingDurability-1": "+100% Firestarter Durability"
+}

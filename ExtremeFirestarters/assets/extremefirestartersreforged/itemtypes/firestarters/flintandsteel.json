@@ -1,16 +1,22 @@
 {
-  "code": "matches",
-  "class": "extremefirestarters:MergedDurability",
+  "code": "flintandsteel",
   "behaviors": [
     {
-      "name": "extremefirestarters:FireStarter",
+      "name": "extremefirestartersreforged:FireStarter",
       "properties": {
         "igniteAnimation": "startfire",
-        "igniteSound": "game:sounds/player/strike1",
-        "satietyCost": { "avg": 0 },
+        "igniteSound": "game:sounds/block/rock-hit-pickaxe",
+        "satietyCost": { "avg": 8, "var": 3 },
         "criticalFailureChance": 0,
-        "ignitionSpeed": 100,
-        "successChance": 0.8
+        "ignitionSpeed": 10,
+        "successChance": 0.1,
+        "returnOnBreak": [
+          {
+            "code": "extremefirestartersreforged:firestriker",
+            "type": "item",
+            "quantity": { "avg": 0.95 }
+          }
+        ]
       }
     },
     {
@@ -21,24 +27,23 @@
       }
     }
   ],
-  "durability": 50,
+
+  "durability": 400,
   "attributes": {
     "groundStorageTransform": {
-      "rotation": { "x": 0, "y": 45, "z": 0 },
       "origin": { "x": 0.5, "y": 0, "z": 0.5 },
       "scale": 0.8
     },
     "rackable": true,
     "toolrackTransform": {
-      "translation": { "x": 0.2, "y": 0.7, "z": 0 },
-      "rotation": { "x": 0, "y": 180, "z": 0 },
-      "scale": 1.25
+      "translation": { "x": 0.3, "y": 0.6, "z": 0 },
+      "rotation": { "x": 7, "y": -17, "z": 180 },
+      "origin": { "x": 0.5, "y": 0, "z": 0.5 }
     },
     "shelvable": true,
     "onshelfTransform": {
-      "rotation": { "x": 0, "y": 45, "z": 0 },
       "origin": { "x": 0.5, "y": 0, "z": 0.5 },
-      "scale": 0.8
+      "scale": 0.65
     }
   },
   "creativeinventory": {
@@ -46,13 +51,13 @@
     "items": [ "*" ],
     "tools": [ "*" ]
   },
-  "shape": { "base": "item/resource/matches" },
+  "shape": { "base": "item/resource/flintandsteel" },
   "heldTpHitAnimation": "breaktool",
   "guiTransform": {
     "translation": { "x": 0, "y": 0, "z": 0 },
-    "rotation": { "x": 118, "y": 46, "z": 4 },
-    "origin": { "x": 0.5, "y": 0, "z": 0.5 },
-    "scale": 3.12
+    "rotation": { "x": 126, "y": 92, "z": 6 },
+    "origin": { "x": 0.51, "y": 0.15, "z": 0.46 },
+    "scale": 2.54
   },
   "fpHandTransform": {
     "translation": { "x": 0, "y": 0, "z": 0 },
@@ -66,9 +71,9 @@
     "scale": 3.6
   },
   "tpHandTransform": {
-    "translation": { "x": 0.8, "y": 0.3, "z": -0.4 },
-    "rotation": { "x": -77, "y": -2, "z": -20 },
+    "translation": { "x": -0.1, "y": 0, "z": -0.1 },
+    "rotation": { "x": -28, "y": 0, "z": -20 },
     "origin": { "x": 0.1, "y": 0, "z": 0.18 },
-    "scaleXyz": { "x": -0.55, "y": 0.55, "z": 0.55 }
+    "scale": 0.55
   }
 }

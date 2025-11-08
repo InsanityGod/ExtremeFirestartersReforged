@@ -6,7 +6,7 @@
     "path": "/1/traits/-",
     "value": "pyromaniac",
     "condition": {
-      "when": "config://ExtremeFirestarterConfig/ClassTraits",
+      "when": "config://ExtremeFirestarterReforgedConfig/ClassTraits",
       "isValue": "true"
     }
   },
@@ -17,7 +17,7 @@
     "path": "/2/traits/-",
     "value": "pyromaniac",
     "condition": {
-      "when": "config://ExtremeFirestarterConfig/ClassTraits",
+      "when": "config://ExtremeFirestarterReforgedConfig/ClassTraits",
       "isValue": "true"
     }
   }

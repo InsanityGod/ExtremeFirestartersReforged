@@ -1,18 +1,19 @@
 {
-  "code": "bowdrill",
+  "code": "bowdrill-crude",
   "behaviors": [
     {
-      "name": "extremefirestarters:FireStarter",
+      "name": "extremefirestartersreforged:FireStarter",
       "properties": {
         "igniteAnimation": "startfire",
         "igniteSound": "game:sounds/player/handdrill",
         "satietyCost": { "avg": 15, "var": 5 },
-        "criticalFailureChance": 0,
-        "ignitionSpeed": 0.75,
-        "successChance": 0.5,
+        "damageOnCriticalFailure": { "avg": 1, "var": 1 },
+        "criticalFailureChance": 0.04,
+        "ignitionSpeed": 0.8,
+        "successChance": 0.1,
         "returnOnBreak": [
           {
-            "code": "game:bow-simple",
+            "code": "game:firewood",
             "type": "item",
             "quantity": { "avg": 0.8 }
           }
@@ -27,7 +28,7 @@
       }
     }
   ],
-  "durability": 100,
+  "durability": 25,
   "attributes": {
     "groundStorageTransform": {
       "translation": { "x": -0.1, "y": 0, "z": 0 },
@@ -40,7 +41,7 @@
       "translation": { "x": 0, "y": 0.65, "z": 0 },
       "rotation": { "x": 180, "y": 180, "z": 0 },
       "origin": { "x": 0.5, "y": 0, "z": 0 },
-      "scale": 1.2
+      "scale": 1.5
     }
   },
   "creativeinventory": {
@@ -48,13 +49,13 @@
     "items": [ "*" ],
     "tools": [ "*" ]
   },
-  "shape": { "base": "item/resource/bowdrill" },
+  "shape": { "base": "item/resource/bowdrill-crude" },
   "heldTpHitAnimation": "breaktool",
   "guiTransform": {
-    "translation": { "x": 0, "y": 0, "z": 0 },
+    "translation": { "x": -3, "y": 0, "z": 0 },
     "rotation": { "x": 112, "y": -133, "z": 4 },
-    "origin": { "x": 0.5, "y": 0.2, "z": 0.5 },
-    "scale": 1.46
+    "origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
+    "scale": 1.61
   },
   "fpHandTransform": {
     "translation": { "x": 0, "y": 0, "z": 0 },
@@ -68,9 +69,9 @@
     "scale": 3.6
   },
   "tpHandTransform": {
-    "translation": { "x": 0, "y": 0, "z": 0 },
-    "rotation": { "x": -20, "y": -25, "z": -22 },
-    "origin": { "x": 0.1, "y": 0, "z": 0.18 },
-    "scale": 0.72
+    "translation": { "x": 0, "y": 0.1, "z": -0.1 },
+    "rotation": { "x": 0, "y": 0, "z": -20 },
+    "origin": { "x": 0.1, "y": 0.1, "z": 0.18 },
+    "scale": 0.76
   }
 }

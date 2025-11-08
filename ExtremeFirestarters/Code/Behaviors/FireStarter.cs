@@ -32,7 +32,7 @@ public class FireStarter(CollectibleObject collObj) : CollectibleBehavior(collOb
     public void OnCriticalFailure(EntityAgent entity)
     {
         if(entity?.Api.Side != EnumAppSide.Server) return;
-        var damage = Props.DamageOnCriticalFailure.nextFloat() * ExtremeFirestartersConfig.Instance.CriticaFailureDamageMultiplier;
+        var damage = Props.DamageOnCriticalFailure.nextFloat() * ExtremeFirestarterReforged.Instance.CriticaFailureDamageMultiplier;
 
         if(damage <= 0f) return;
         //TODO better death messages support
@@ -69,13 +69,13 @@ public class FireStarter(CollectibleObject collObj) : CollectibleBehavior(collOb
         return result;
     }
 
-    public float GetRandomSatietyCost(EntityAgent byEntity) => Props.SatietyCost.nextFloat() * ExtremeFirestartersConfig.Instance.SatietyCostMultiplier;
+    public float GetRandomSatietyCost(EntityAgent byEntity) => Props.SatietyCost.nextFloat() * ExtremeFirestarterReforged.Instance.SatietyCostMultiplier;
     
-    public float CalculateIgnitionSpeed(EntityAgent byEntity) => Props.IgnitionSpeed * ExtremeFirestartersConfig.Instance.IgnitionSpeedMultiplier * byEntity.Stats.GetBlended("firestartingSpeed");
+    public float CalculateIgnitionSpeed(EntityAgent byEntity) => Props.IgnitionSpeed * ExtremeFirestarterReforged.Instance.IgnitionSpeedMultiplier * byEntity.Stats.GetBlended("firestartingSpeed");
 
-    public float CalculateSuccessChance(EntityAgent byEntity) => Props.SuccessChance * ExtremeFirestartersConfig.Instance.SuccessChanceMultiplier * byEntity.Stats.GetBlended("firestartingSuccess");
+    public float CalculateSuccessChance(EntityAgent byEntity) => Props.SuccessChance * ExtremeFirestarterReforged.Instance.SuccessChanceMultiplier * byEntity.Stats.GetBlended("firestartingSuccess");
 
-    public float CalculateCriticalFailureChance(EntityAgent byEntity) => Props.CriticalFailureChance * ExtremeFirestartersConfig.Instance.CriticalFailureChanceMultiplier;
+    public float CalculateCriticalFailureChance(EntityAgent byEntity) => Props.CriticalFailureChance * ExtremeFirestarterReforged.Instance.CriticalFailureChanceMultiplier;
 
     public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling, ref EnumHandling handling)
     {
@@ -143,22 +143,22 @@ public class FireStarter(CollectibleObject collObj) : CollectibleBehavior(collOb
         {
             var newSatiety = hunger.Saturation - satietyCost;
             hunger.Saturation = Math.Max(0, newSatiety);
-            if(ExtremeFirestartersConfig.Instance.FailureOnLackOfSatiety && newSatiety <= 0) return;
+            if(ExtremeFirestarterReforged.Instance.FailureOnLackOfSatiety && newSatiety <= 0) return;
         }
 
-        if (ExtremeFirestartersConfig.Instance.DurabilityLossBeforeSuccess && !ConsumeDurability(slot, byEntity)) return;
+        if (ExtremeFirestarterReforged.Instance.DurabilityLossBeforeSuccess && !ConsumeDurability(slot, byEntity)) return;
 
         var successChance = CalculateSuccessChance(byEntity);
         if(successChance < byEntity.World.Rand.NextDouble())
         {
             if (CalculateCriticalFailureChance(byEntity) > byEntity.World.Rand.NextDouble()) OnCriticalFailure(byEntity);
-            if (ExtremeFirestartersConfig.Instance.DurabilityLossOnFailure && !ExtremeFirestartersConfig.Instance.DurabilityLossBeforeSuccess) ConsumeDurability(slot, byEntity);
+            if (ExtremeFirestarterReforged.Instance.DurabilityLossOnFailure && !ExtremeFirestarterReforged.Instance.DurabilityLossBeforeSuccess) ConsumeDurability(slot, byEntity);
             return;
         }
 
         EnumHandling _ = EnumHandling.PassThrough;
         ignitable.OnTryIgniteBlockOver(byEntity, blockSel.Position, scaledSecondsUsed, ref _);
-        if (!ExtremeFirestartersConfig.Instance.DurabilityLossBeforeSuccess) ConsumeDurability(slot, byEntity);
+        if (!ExtremeFirestarterReforged.Instance.DurabilityLossBeforeSuccess) ConsumeDurability(slot, byEntity);
     }
 
     public override bool OnHeldInteractCancel(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, EnumItemUseCancelReason cancelReason, ref EnumHandling handled)

@@ -5,7 +5,7 @@
     "op": "addMerge",
     "path": "/selling/list/-",
     "value": {
-      "code": "extremefirestarters:bowdrill",
+      "code": "extremefirestartersreforged:bowdrill",
       "type": "item",
       "stacksize": 1,
       "stock": { "avg": 2, "var": 0.5 },
@@ -17,7 +17,7 @@
     "op": "addMerge",
     "path": "/selling/list/-",
     "value": {
-      "code": "extremefirestarters:flintandsteel",
+      "code": "extremefirestartersreforged:flintandsteel",
       "type": "item",
       "stacksize": 1,
       "stock": { "avg": 2, "var": 0.5 },
@@ -33,7 +33,7 @@
       "chance": 1,
       "minQuantity": 1,
       "maxQuantity": 1,
-      "codes": [ "extremefirestarters:bowdrill-crude" ]
+      "codes": [ "extremefirestartersreforged:bowdrill-crude" ]
     }
   },
   {
@@ -45,7 +45,7 @@
       "chance": 0.1,
       "minQuantity": 1,
       "maxQuantity": 1,
-      "codes": [ "extremefirestarters:bowdrill" ]
+      "codes": [ "extremefirestartersreforged:bowdrill" ]
     }
   }
 
