@@ -101,7 +101,7 @@ public class FireStarter(CollectibleObject collObj) : CollectibleBehavior(collOb
             var saturation = playerEntity.WatchedAttributes.GetTreeAttribute("hunger")?.GetFloat("currentsaturation");
             if(saturation is not null && saturation <= GetMinimumSatietyCost(byEntity))
             {
-                (byEntity.Api as ICoreClientAPI)?.TriggerIngameError(playerEntity.Player, "toohungry", Lang.Get("extremefirestartersreforged:toohungry"));
+                (byEntity.Api as ICoreClientAPI)?.TriggerIngameError(this, "toohungry", Lang.Get("extremefirestartersreforged:toohungry"));
                 return;
             }
         }

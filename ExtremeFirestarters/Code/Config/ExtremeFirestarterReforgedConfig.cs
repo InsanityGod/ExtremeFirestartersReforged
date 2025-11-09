@@ -1,9 +1,9 @@
-﻿using InsanityLib.Attributes.Auto.Config;
+﻿using ExtremeFirestarters.Code.Config.SubConfig;
+using InsanityLib.Attributes.Auto.Config;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace ExtremeFirestarters.Code.Config;
-
 public class ExtremeFirestarterReforgedConfig
 {
     [AutoConfig("ExtremeFirestarterReforgedConfig.json", ServerSync = true)]
@@ -81,4 +81,9 @@ public class ExtremeFirestarterReforgedConfig
     /// </summary>
     [DefaultValue(true)]
     public bool ClassTraits { get; set; } = true;
+
+    /// <summary>
+    /// Configuration for new Torch related mechanics
+    /// </summary>
+    public TorchConfig TorchConfig { get; set; } = new();
 }

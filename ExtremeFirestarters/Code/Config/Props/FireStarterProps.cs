@@ -17,7 +17,6 @@ public class FireStarterProps
     /// </summary>
     public AssetLocation IgniteSound { get; set; } = new("game", "sounds/player/handdrill");
 
-    //TODO dissalow igniting blocks if satiety is below lowest potential value
     /// <summary>
     /// The cost in satiety of trying to ignite a block.
     /// </summary>

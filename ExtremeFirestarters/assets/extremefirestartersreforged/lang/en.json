@@ -28,6 +28,8 @@
 
   "toohungry": "You are too hungry to do this.",
 
+  "holding-active-torch": "Holding an active torch, cannot switch slot.",
+
   //Death messages (BetterDeathMessages)
   "firestarting-critical-failure-1": "Player {0} died trying to light a fire.",
   "firestarting-critical-failure-2": "Player {0} lit themselves instead of the campfire.",
