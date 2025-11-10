@@ -59,14 +59,15 @@ public class ExtremeFirestarterReforgedModSystem : ModSystem
     {
         var hotbar = player.InventoryManager.GetHotbarInventory();
         var fromSlot = hotbar[args.FromSlot];
-        ExtinguishIfNotHeldPatches.TryExtinguishSlot(fromSlot, fromSlot.Itemstack);
+        ExtinguishIfNotHeldPatches.TryExtinguishSlot(fromSlot, fromSlot?.Itemstack);
     }
 
     private EnumHandling PreventAccidentalExtinguishOnSlotChange(ActiveSlotChangeEventArgs args)
     {
-        var hotbar = capi.World.Player.InventoryManager.GetHotbarInventory();
+        var invManger = capi.World.Player.InventoryManager;
+        var hotbar = invManger.GetHotbarInventory();
         var fromSlot = hotbar[args.FromSlot];
-        if(fromSlot.Itemstack?.Collectible is BlockTorch torch && !torch.IsExtinct)
+        if(fromSlot != invManger.OffhandHotbarSlot && fromSlot?.Itemstack?.Collectible is BlockTorch torch && !torch.IsExtinct)
         {
             capi.TriggerIngameError(this, "holding-active-torch", Lang.Get("extremefirestartersreforged:holding-active-torch"));
             return EnumHandling.PreventSubsequent;

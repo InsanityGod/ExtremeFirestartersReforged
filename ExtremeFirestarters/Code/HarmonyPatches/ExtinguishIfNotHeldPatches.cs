@@ -18,7 +18,7 @@ public static class ExtinguishIfNotHeldPatches
 
     public static void TryExtinguishSlot(ItemSlot slot, ItemStack itemstack)
     {
-        var api = slot.Inventory?.Api;
+        var api = slot?.Inventory?.Api;
 
         if (api is null || itemstack?.Collectible is not BlockTorch torch || torch.IsExtinct || slot.GetType().Name == "ItemSlotGround") return;
 
