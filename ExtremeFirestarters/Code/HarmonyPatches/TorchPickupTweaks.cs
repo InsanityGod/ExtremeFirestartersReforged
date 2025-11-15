@@ -14,7 +14,7 @@ public static class TorchPickupTweaks
     [HarmonyPrefix]
     public static bool Prefix(PlayerInventoryManager __instance, ItemSlot sourceSlot, ref ItemSlot __result)
     {
-        if(sourceSlot.Itemstack?.Collectible is not BlockTorch torch || torch.IsExtinct) return true;
+        if(sourceSlot.Itemstack?.Collectible is not BlockTorch torch || torch.ExtinctVariant is null || torch.IsExtinct) return true;
 
         var slot = __instance.ActiveHotbarSlot;
 

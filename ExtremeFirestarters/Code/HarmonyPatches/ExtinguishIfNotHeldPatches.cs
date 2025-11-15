@@ -20,7 +20,7 @@ public static class ExtinguishIfNotHeldPatches
     {
         var api = slot?.Inventory?.Api;
 
-        if (api is null || itemstack?.Collectible is not BlockTorch torch || torch.IsExtinct || slot.GetType().Name == "ItemSlotGround") return;
+        if (api is null || itemstack?.Collectible is not BlockTorch torch || torch.ExtinctVariant is null || torch.IsExtinct || slot.GetType().Name == "ItemSlotGround") return;
 
         var pos = slot.Inventory.Pos;
 
