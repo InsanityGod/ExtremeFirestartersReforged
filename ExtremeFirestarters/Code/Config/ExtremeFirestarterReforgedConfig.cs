@@ -1,5 +1,5 @@
 ﻿using ExtremeFirestarters.Code.Config.SubConfig;
-using InsanityLib.Attributes.Auto.Config;
+using InsanityLib.Generators.Attributes;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -7,7 +7,7 @@ namespace ExtremeFirestarters.Code.Config;
 public class ExtremeFirestarterReforgedConfig
 {
     [AutoConfig("ExtremeFirestarterReforgedConfig.json", ServerSync = true)]
-    public static ExtremeFirestarterReforgedConfig Instance { get; private set; }
+    public static ExtremeFirestarterReforgedConfig Instance { get; internal set; }
 
     /// <summary>
     /// Multiplier on the speed of ignition attempts, increasing this value makes firestarting faster.

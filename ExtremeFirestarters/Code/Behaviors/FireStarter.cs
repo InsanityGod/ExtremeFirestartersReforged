@@ -1,7 +1,7 @@
 ﻿using BetterDeathMessages.Code;
 using ExtremeFirestarters.Code.Config;
 using ExtremeFirestarters.Code.Config.Props;
-using InsanityLib.Util;
+using InsanityLib.Extensions;
 using System;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;

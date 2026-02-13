@@ -4,41 +4,46 @@ using ExtremeFirestarters.Code.Config;
 using ExtremeFirestarters.Code.Config.SubConfig;
 using ExtremeFirestarters.Code.HarmonyPatches;
 using HarmonyLib;
-using InsanityLib.Attributes.Auto;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
 
-[assembly: AutoRegistry("extremefirestartersreforged")]
 namespace ExtremeFirestarters;
-public class ExtremeFirestarterReforgedModSystem : ModSystem
+
+public partial class ExtremeFirestarterReforgedModSystem : ModSystem
 {
-    private static ICoreClientAPI capi;
+    private ICoreClientAPI _capi;
+
+    public override void StartPre(ICoreAPI api)
+    {
+        base.StartPre(api);
+        AutoSetup(api);
+    }
 
     public override void Start(ICoreAPI api)
     {
         base.Start(api);
-
-        if (!Harmony.HasAnyPatches(Mod.Info.ModID))
-        {
-            var harmony = new Harmony(Mod.Info.ModID);
-            harmony.PatchAllUncategorized();
-            var torchConfig = ExtremeFirestarterReforgedConfig.Instance.TorchConfig;
-            if (torchConfig.ExtinguishIfNotHeld)
-            {
-                harmony.PatchCategory(nameof(TorchConfig.ExtinguishIfNotHeld));
-                if (torchConfig.OnlyAllowPickupWithFreeHands) harmony.PatchCategory(nameof(TorchConfig.OnlyAllowPickupWithFreeHands));
-            }
-        }
-
         if(api.ModLoader.IsModEnabled("betterdeathmessages")) RegisterDeathMessagePool();
+    }
+
+    partial void ManualPatches(Harmony harmony, ICoreAPI api)
+    {
+        //Load configs earlier then normal
+        LoadAutoConfigs(api);
+
+        var torchConfig = ExtremeFirestarterReforgedConfig.Instance.TorchConfig;
+        if (torchConfig.ExtinguishIfNotHeld)
+        {
+            harmony.PatchCategory(nameof(TorchConfig.ExtinguishIfNotHeld));
+            if (torchConfig.OnlyAllowPickupWithFreeHands) harmony.PatchCategory(nameof(TorchConfig.OnlyAllowPickupWithFreeHands));
+        }
     }
 
     public override void StartClientSide(ICoreClientAPI api)
     {
-        capi = api;
+        _capi = api;
         var torchConfig = ExtremeFirestarterReforgedConfig.Instance.TorchConfig;
         if (torchConfig.ExtinguishIfNotHeld && torchConfig.PreventAccidentalScrollExtinguish)
         {
@@ -64,12 +69,12 @@ public class ExtremeFirestarterReforgedModSystem : ModSystem
 
     private EnumHandling PreventAccidentalExtinguishOnSlotChange(ActiveSlotChangeEventArgs args)
     {
-        var invManger = capi.World.Player.InventoryManager;
+        var invManger = _capi.World.Player.InventoryManager;
         var hotbar = invManger.GetHotbarInventory();
         var fromSlot = hotbar[args.FromSlot];
         if(fromSlot != invManger.OffhandHotbarSlot && fromSlot?.Itemstack?.Collectible is BlockTorch torch && torch.ExtinctVariant is not null && !torch.IsExtinct)
         {
-            capi.TriggerIngameError(this, "holding-active-torch", Lang.Get("extremefirestartersreforged:holding-active-torch"));
+            _capi.TriggerIngameError(this, "holding-active-torch", Lang.Get("extremefirestartersreforged:holding-active-torch"));
             return EnumHandling.PreventSubsequent;
         }
 
@@ -83,6 +88,12 @@ public class ExtremeFirestarterReforgedModSystem : ModSystem
         BaseCode = "extremefirestartersreforged:firestarting-critical-failure",
         Length = 4
     });
+
+    public override void AssetsLoaded(ICoreAPI api)
+    {
+        base.AssetsLoaded(api);
+        AutoAssetsLoaded(api);
+    }
 
     public override void AssetsFinalize(ICoreAPI api)
     {
@@ -101,7 +112,17 @@ public class ExtremeFirestarterReforgedModSystem : ModSystem
 
     public override void Dispose()
     {
-        new Harmony(Mod.Info.ModID).UnpatchAll(Mod.Info.ModID);
-        capi = null;
+        base.Dispose();
+
+        if (_api is ICoreServerAPI sapi)
+        {
+            sapi.Event.AfterActiveSlotChanged -= ExtinguishTorchOnSlotChange;
+        }
+        else if (_api is ICoreClientAPI capi)
+        {
+            capi.Event.BeforeActiveSlotChanged += PreventAccidentalExtinguishOnSlotChange;
+        }
+
+        AutoDispose();
     }
 }
