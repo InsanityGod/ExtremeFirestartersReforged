@@ -17,7 +17,7 @@
 	"textures": {
 		"maple": "game:block/wood/debarked/maple",
 		"flint": "game:block/stone/flint",
-		"handle": "game:item/tool/material/handle",
+		"handle": "game:item/tool/handle",
 		"oak": "game:block/wood/debarked/oak",
 		"bark": "game:block/wood/firewood/bark",
 		"side": "game:block/wood/firewood/side",

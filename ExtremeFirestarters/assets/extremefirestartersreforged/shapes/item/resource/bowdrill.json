@@ -14,11 +14,11 @@
 		"handle": [8,8]
 	},
 	"textures": {
-		"feather": "game:item/tool/material/feather",
-		"string": "game:item/tool/material/string",
+		"feather": "game:item/tool/feather",
+		"string": "game:item/resource/string",
 		"maple": "game:block/wood/debarked/maple",
 		"flint": "game:block/stone/flint",
-		"handle": "game:item/tool/material/handle",
+		"handle": "game:item/tool/handle",
 		"oak": "game:block/wood/debarked/oak",
 		"bark": "game:block/wood/firewood/bark",
 		"side": "game:block/wood/firewood/side",
